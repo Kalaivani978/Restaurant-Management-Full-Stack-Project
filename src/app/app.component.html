@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-warning">
+  <ul class="navbar-nav">
+    <p>SWIGGY</p>
+    <div class="Container Fluid">
+      <nav class="navbar navbar-expand-lg navbar navbar-dark bg-warning">
+        <button   *ngIf="loginService.isUserLoggedIn()" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" class="button" title="Restaurant Functions">
+          👩🏻‍🌾🍔
+        </button>
+
+        <ul class="dropdown-menu">
+          <li class="nav-item">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/restaurant" routerLinkActive="active"
+              class="nav-link"><button class="dropdown-item" type="submit" class= "button" title="Restaurant List">View the Restaurant
+                List</button></a>
+
+          </li>
+          <li class="nav-item">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/create-restaurant" routerLinkActive="active"
+              class="nav-link"><button class="dropdown-item" type="submit" class="button" title="Add Restaurant">Add the
+                Restaurant</button></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+
+    <li class="nav-item">
+      <a routerLink="/home" class="nav-link"><button type="submit" class="button" title="Home">Home</button></a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/About-Us" class="nav-link"><button type="submit" class="button" title="About us">About
+          us</button></a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="loginService.isUserLoggedIn()" routerLink="/contactUs" class="nav-link" title="Contact us"><button
+          type="submit" class="button">Contact Us</button></a>
+    </li>
+
+  </ul>
+
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul style="list-style-type: none;">
+      <li class="nav-item">
+        <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"><button type="submit"
+            class="button" title="Login">Login</button></a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/profile-card" class="fa fa-user-circle-o"
+          aria-hidden="true" style="text-align: right;"><button type="submit" class="button" title="Profile">
+            Profile</button></a>
+      </li>
+
+
+      <li class="nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"><button type="submit"
+            class="button" title="Logout">Logout</button></a>
+      </li>
+
+    </ul>
+  </div>
+
+
+</nav>
+
+<h1 class="text-center"> <b>{{title}} </b></h1>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

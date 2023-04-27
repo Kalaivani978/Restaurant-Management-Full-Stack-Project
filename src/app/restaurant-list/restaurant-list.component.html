@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="list row">
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [(ngModel)]="resName" style="background-color:yellow; border-radius: 0%;border: 0cm;box-sizing: border-box;box-shadow: inset; margin-left: 50%; width:10%; height: 3.5vh;box-sizing: border-box;border: 0cqmax;" placeholder="Search the Restaurant"/>
+                <div class="inupt-group-append">
+                    <button class="btn-btn-outline-secondary" type="button" (click)="searchByResName()" style="box-sizing: border-box; border-color: blue; border-radius:0cqmax;background-color:yellowgreen;">Search🔍</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+    <span> 👉Restaurant List</span>
+    <button *ngIf="restaurant.length!==0" class="m-3 btn btn-sm-btn-danger" (click)="removeAllRestaurant()"
+    style="font-style: bold; border: 0rem; box-sizing: border-box; border-color: red;" class="bottom-right"> Remove
+    All</button>
+    <button class="btn btn-outline-primary" type="button" (click)="fetchVegRestaurant()"style="margin-left:41%">
+        Veg Hotel List
+      </button>
+      <button class="btn btn-outline-primary" type="button" (click)="fetchNonVegRestaurant()" style="margin-left: 6%;" >
+        Nonveg Hotel List
+      </button>
+    <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th> Restaurant Name🌚</th>
+                <th> Owner Name 👑</th>
+                <th> Food Type😻</th>
+                <th> Rating👌 </th>
+                <th> Location➡ </th>
+                <th> Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let eachRestaurant of restaurant" class="table-dark">
+                <td> {{ eachRestaurant.resName }}
+
+                </td>
+                <td> {{ eachRestaurant.ownerName }} </td>
+                <td> {{ eachRestaurant.foodType }}
+                    <button (click)="updateRestaurant(eachRestaurant.resId)" class="fa fa-pencil"
+                        aria-hidden="true" style="background: none;"></button>
+                </td>
+                <td> {{ eachRestaurant.rating }}
+                    <button (click)="updateRestaurant(eachRestaurant.resId)" class="fa fa-pencil"
+                        aria-hidden="true" style="background: none;"></button>
+                </td>
+                <td> <a href="{{eachRestaurant.location}}">📍</a>
+                    <button (click)="updateRestaurant(eachRestaurant.resId)" class="fa fa-pencil"
+                        aria-hidden="true" style="background: none;"></button>
+                </td>
+                <td>
+                    <button (click)="restaurantDetails(eachRestaurant.resId)" style="background-color: none; background: none;">👀</button>
+                    <button (click)="deleteRestaurant(eachRestaurant.resId)" class="fa fa-trash" aria-hidden="true"
+                        style="margin-left: 10px;background:none"></button>
+
+                </td>
+            </tr>
+            <tr scope="row" *ngIf="restaurant.length==0">
+                <td colspan="6" class="text-center">No record Found</td>
+            </tr>
+            
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

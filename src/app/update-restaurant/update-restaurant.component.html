@@ -1,0 +1,39 @@
+<div class="col-md-6 offset-md-3">
+    
+    <marquee behavior="scroll" direction="left"
+    onmousedown="this.stop();"
+    onmouseup="this.start();"><b style="background:linear-gradient(to right,violet,green,yellow, pink,orange);">Update Your FoodType/Location/Rating here!..</b></marquee>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <p style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; text-decoration: underline;  color: white; font-size: larger;"> Restaurant Name</p>
+            <input type="text" class ="form-control" id = "resName"
+                [(ngModel)] = "restaurant.resName" name = "resName">
+        </div>
+
+        <div class="form-group">
+            <p style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;text-decoration: underline; color: white; font-size: larger;"> Owner Name</p>
+            <input type="text" class ="form-control" id = "ownName"
+                [(ngModel)] = "restaurant.ownerName" name = "ownerName">
+        </div>
+
+        <div class="form-group">
+            <p style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; text-decoration: underline; color: white; font-size: larger;"> Food Type</p>
+            <input type="text" class ="form-control" id = "foodtype"
+                [(ngModel)] = "restaurant.foodType" name = "foodType">
+        </div>
+        <div class="form-group">
+            <p style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; text-decoration: underline; color:white; font-size: larger;"> Ratings</p>
+            <input type="text" class ="form-control" id = "rating"
+                [(ngModel)] = "restaurant.rating" name = "rating">
+        </div>
+        <div class="form-group">
+            <p style="text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; text-decoration: underline; color:white; font-size: larger;"> Location</p>
+            <input type="url" class ="form-control" id = "location"
+                [(ngModel)] = "restaurant.location" name = "location">
+        </div>
+        <button class = "btn btn-success" type ="submit" style="margin-left: 85%;">Submit</button>
+
+    </form>
+    </div> 
+

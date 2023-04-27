@@ -1,0 +1,41 @@
+<body>
+    <div class="col-md-6 offset-md-3">
+        <!--  To make the text movable to left-->
+        <marquee behavior="scroll" direction="left" onmousedown="this.stop();" onmouseup="this.start();"><b
+                style="background:linear-gradient(to right,violet,green,yellow, pink,orange);">Add Your Restaurant
+                here!..</b></marquee>
+        <form (ngSubmit)="onSubmit()" class="form-horizontal">
+
+            <div class="form-group">
+                <label>RestaurantName</label>
+                <input type="text" class="form-control" id="resName" [(ngModel)]="restaurant.resName" name="resName"
+                    placeholder="Restaurant Name" required>
+            </div>
+
+            <div class="form-group">
+                <label>OwnerName</label>
+                <input type="text" class="form-control" id="ownerName" [(ngModel)]="restaurant.ownerName"
+                    name="ownerName" placeholder="OwnerName" required>
+            </div>
+
+            <div class="form-group">
+                <label> FoodType</label>
+                <input type="text" class="form-control" id="foodType" [(ngModel)]="restaurant.foodType" name="foodType"
+                    placeholder="Food Type" required>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="text" class="form-control" id="rating" [(ngModel)]="restaurant.rating" name="rating"
+                    placeholder="Rating" required>
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="url" class="form-control" id="location" [(ngModel)]="restaurant.location" name="location"
+                    placeholder="Location" required>
+            </div>
+
+            <button class="btn btn-success" type="submit" style="margin-left: 85%;">Submit</button>
+
+        </form>
+    </div>
+</body>

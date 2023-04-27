@@ -1,0 +1,12 @@
+p{
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-display: 12;
+  color:black;
+  margin-top: 20%;
+  
+}
+p a{
+  background: linear-gradient(to left, orange, yellowgreen, green, pink);
+  color:black
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <marquee behavior="scroll" direction="left"
+           onmousedown="this.stop();"
+           onmouseup="this.start();"><b style="background:linear-gradient(to right,violet,green,yellow, pink,orange);">A very warm Welcome to you.Please Login here!...</b></marquee>
+
+    <img class="log">
+    <div class="loginbox">
+    <img src="../assets/new avatar.png" class="avatar">
+   
+    <form>
+       <p> Username</p>
+       <input type="text" placeholder="Enter Username" name="username" [(ngModel)]= "username" required>
+       <div class="alert alert danger" role="alert" *ngIf="invalidLogin" style="font-size: small;">UserName is Required</div>
+       <p> Password</p>
+       <input type="password" name="password" placeholder="Enter Password"  [(ngModel)]= "password" required><br>
+       <div class="alert alert danger" role="alert" *ngIf="invalidLogin">
+        Password is Required</div>
+       <input type="checkbox"><span> Remember me </span>
+       <a href="http://localhost:4200/forgot"><b style="margin-left:19%;">Forgot password?</b></a>
+       <!--CheckLogin Method is called, when you click on login button-->
+       <button (click)="checkLogin()" class="btn btn-success">Login</button><br>
+       
+       
+       <a href="http://localhost:4200/register-page"><b style="margin-left:20%;">Don't have an acoount?</b></a>
+    </form>
+    </div>
+  </body>
+</html>

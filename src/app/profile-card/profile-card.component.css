@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+body {
+    top: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    width: auto;
+    height: auto;
+    background-image: url("C:\Users\larun\Desktop\FullStackProject\FSProject\src\assets\profile image.png");
+    
+   
+}
+
+.container {
+    height: 450px;
+    width: 300px;
+    box-shadow: 0 10px 20px black;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: 'Abel', sans-serif;
+    
+}
+
+.image {
+    height: 130px;
+    width: 120px;
+    background-image: url("C:\Users\larun\Desktop\FullStackProject\FSProject\src\assets\2 fixed (2).jpg");
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid green;
+    position: relative;
+    top: 200px;
+    margin-left: 170px;
+    box-shadow: 0 2px 15px yellowgreen;
+    transform: rotate(-20deg);
+}
+
+.shape {
+    height: 250px;
+    width: 400px;
+    
+    margin-left: -20px;
+    position: relative;
+    top: -80px;
+    box-shadow: 0 2px 15px black;
+    transform: rotate(25deg);
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    background: linear-gradient(to left, yellowgreen,green,pink,red, green);
+}
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+    font-size:small;
+}
+
+.icons {
+    margin-top: 15px;
+}
+
+.icons i {
+    margin-left: 10px;
+    font-size: 30px;
+    transition: 0.3s;
+    color: rgb(40, 163, 194);
+    margin-top: 0%;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+    color: rgb(18, 192, 235);
+}

@@ -1,0 +1,84 @@
+form a {
+font-size: large;
+font-weight: bold;
+margin:0;
+color:orange
+}
+body{
+    margin-bottom: 10%;
+    padding:0;
+    
+    background-size: cover;
+    font-family: sans-serif;
+     }
+.log{  width:1366px;
+    height:696px;
+    
+    }
+.loginbox{  width: 320px;
+    height: 350px;
+    background: none;
+    color: greenyellow;
+    top:30%;
+    left:40%;
+    position:absolute;
+   
+    
+
+         }
+.avatar{  width: 75px;
+    height: 75px;
+    border-radius:50%;
+    position:absolute;
+    top:-14%;
+    left:calc(50% - 50px);
+       }
+
+.loginbox p{  margin:0;
+    padding:10px;
+    font-weight:bold;
+           }
+.loginbox input[type="text"], input[type="password"]{width: 100%;
+    margin-bottom:20px;
+               }
+.loginbox input[type="text"], input[type="password"]{
+    border: 12;
+    border-bottom: 1px solid white;
+    
+    outline:none;
+    height:40px;
+    color:orange;
+    font-size:16px;
+        }
+.loginbox button{
+    border: none;
+    outline:none;
+    height:40px;
+    background:green;
+    color:black;
+    font-size:18px;
+    border-radius:20px;
+    margin-top:auto;
+    margin-left: 39%;
+        }
+.loginbox button:hover
+{    cursor:pointer;
+    background:#ffc107;
+    color:coral;
+}
+.loginbox a{   
+    text-decoration:black;
+    font-size:13px;
+    line-height:15px;
+    color:greenyellow;
+
+}
+.loginbox a:hover
+{  
+  color:#ffc107;
+}
+.active{
+  color:white;
+  background:#e02626;
+  border-radius:4px;
+}
